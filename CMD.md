@@ -10,6 +10,10 @@ Run le server
     
     php -S 127.0.0.1:9000 -t public
     
+    Pour passer en mode prod, il faut ouvrir le fichier .env et remplacer APP_ENV=dev par APP_ENV=prod
+    
+[Pour configurer un nouvelle environnement](https://symfony.com/doc/current/configuration/environments.html)
+    
 Créer la base de donnée
 --
 Remplacer les valeurs de la ligne ci-dessous dans le fichier `.env`

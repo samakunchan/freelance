@@ -1,3 +1,107 @@
-body {
-    background-color: lightgray;
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.part0{
+    background-color: whitesmoke;
+}
+.part1{
+    background-color: red;
+}
+.part2{
+    background-color: pink;
+}
+
+.page{
+    position: relative;
+    top: 100vh;
+}
+nav{
+    background-color: white;
+    display: inline-flex;
+    width: 100vw;
+    height: 9vh;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.triangle{
+    position: fixed;
+    top: 5vh;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 30px solid white;
+    z-index: 9;
+}
+.triangle-shadow{
+    position: fixed;
+    top: 5vh;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 33px solid rgba(0, 0, 0, 0.4);
+    z-index: 9;
+}
+.triangle-btn{
+    position: fixed;
+    top: 5vh;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 50px solid #3CC157;
+    z-index: 8;
+}
+.triangle-btn-shadow{
+    position: fixed;
+    top: 5vh;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 53px solid rgba(0, 0, 0, 0.4);
+    z-index: 7;
+}
+.triangle-btn:hover{
+    border-top: 50px solid #3CC157;
+}
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+/****************************************************************************************/
+/****************************************************************************************/
+/****************************************************************************************/
+/*Header*/
+header img{
+    width: 4vw;
+    height: 8vh;
+    object-fit: contain;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #ff649c!important;
+}
+/****************************************************************************************/
+/****************************************************************************************/
+/****************************************************************************************/
+/*Section 1*/
+
+#home article{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
 }
