@@ -13,7 +13,7 @@ section{
     background-color: whitesmoke;
 }
 .part1{
-    background-color: red;
+    background-color: #04949e;
 }
 .part2{
     background-color: pink;
@@ -102,6 +102,61 @@ header img{
 
 #home article{
     position: absolute;
+}
+
+#home article div{
+    position: absolute;
+    width: 40vw;
+    top: 40vh;
+    left: 30vw;
+}
+
+#home article h2{
+    width: 20vw;
+}
+
+#home article #texte0{
+    position: absolute;
     top: 50vh;
+    left: 10vw;
+}
+
+#home article #texte1{
+    position: absolute;
+    top: 20vh;
     left: 50vw;
+}
+
+#home article #texte2{
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+}
+
+#home article #texte3{
+    position: absolute;
+    top: 60vh;
+    left: 60vw;
+}
+
+#home article #texte4{
+    position: absolute;
+    top: 70vh;
+    left: 45vw;
+}
+
+#home article div em{
+    float: right;
+}
+/****************************************************************************************/
+/****************************************************************************************/
+/****************************************************************************************/
+/*Section 2*/
+.onglet{
+    position: absolute;
+    top: -20vh;
+    width: 100vw;
+    height: 50vh;
+    background-color: red;
+    z-index: 2;
 }

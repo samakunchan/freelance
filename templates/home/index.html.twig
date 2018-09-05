@@ -7,16 +7,16 @@
         <header>
             <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
                 <span class="navbar-brand">Samakunchan Technology</span>
-                <img class="navbar-brand" src="{{ asset('images/logo-fr.png') }}" alt="">
+                <img class="navbar-brand" src="{{ asset('images/logo-fr.png') }}" alt="logo" title="Samakunchan Technology">
                 <ul class="nav navbar-nav w-75 justify-content-end">
                     <li class="nav-item">
                         <a id="part0" class="nav-link m-4" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="part1" class="nav-link m-4" href="#section1">Section 1</a>
+                        <a id="part1" class="nav-link m-4" href="#competence">Compétences</a>
                     </li>
                     <li class="nav-item">
-                        <a id="part2" class="nav-link m-4" href="#section2">Section 2</a>
+                        <a id="part2" class="nav-link m-4" href="#realistation">Réalisations</a>
                     </li>
                 </ul>
             </nav>
@@ -26,12 +26,23 @@
             <div class="triangle-btn"></div>
             <div class="triangle-btn-shadow"></div>
         </header>
-        <section id="home" class="page part0 container-fluid active-page">
+
+        <section id="home" class="page part0 active-page">
             <article>
-                <h1>Samakunchan</h1>
+                <div>
+                    <h1>Samakunchan Technology</h1>
+                    <em>Développeur: Cédric Badjah</em>
+                </div>
+                <h2 id="texte0" style="opacity: 0"></h2>
+                <h2 id="texte1" style="opacity: 0"></h2>
+                <h2 id="texte2" style="opacity: 0"></h2>
+                <h2 id="texte3" style="opacity: 0"></h2>
+                <h2 id="texte4" style="opacity: 0"></h2>
             </article>
         </section>
-        <section id="section1" class="page part1 container-fluid"></section>
-        <section id="section2" class="page part2 container-fluid"></section>
+        <section id="competence" class="page part1">
+            <div class="onglet"></div>
+        </section>
+        <section id="realistation" class="page part2"></section>
     </main>
 {% endblock %}

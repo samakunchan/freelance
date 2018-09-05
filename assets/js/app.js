@@ -13,4 +13,5 @@
 
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
 require('./myFiles/scroll.js');
-require('./myFiles/ball.js');
+require('./myFiles/balls.js');
+require('./myFiles/keywords.js');
