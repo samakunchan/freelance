@@ -16,12 +16,37 @@ section{
     background-color: #04949e;
 }
 .part2{
-    background-color: pink;
+    background-color: #3CC157;
 }
-
+/****************************************************************************************/
+/****************************************************************************************/
+/****************************************************************************************/
+/*Animation des pages*/
 .page{
     position: relative;
     top: 100vh;
+}
+.slideshow{
+    position: relative;
+    top: 0vh;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+/****************************************************************************************/
+/**********************************HEADER NAVBAR MENU************************************/
+/****************************************************************************************/
+header img{
+    width: 4vw;
+    height: 8vh;
+    object-fit: contain;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #ff649c!important;
 }
 nav{
     background-color: white;
@@ -33,7 +58,13 @@ nav{
     top: 0;
     z-index: 10;
 }
-
+.nav-item{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.nav-item a{
+    #padding: 0;
+}
 .triangle{
     position: fixed;
     top: 5vh;
@@ -77,28 +108,15 @@ nav{
 .triangle-btn:hover{
     border-top: 50px solid #3CC157;
 }
-.ball {
-    position: absolute;
-    border-radius: 100%;
-    opacity: 0.7;
+.space-navbar{
+    height: 9vh;
 }
 /****************************************************************************************/
+/*******************************HOME PAGE D'ACCUEIL**************************************/
 /****************************************************************************************/
-/****************************************************************************************/
-/*Header*/
-header img{
-    width: 4vw;
-    height: 8vh;
-    object-fit: contain;
+#home{
+    height: 100vh;
 }
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    background-color: #FFFF00;
-    color: #ff649c!important;
-}
-/****************************************************************************************/
-/****************************************************************************************/
-/****************************************************************************************/
-/*Section 1*/
 
 #home article{
     position: absolute;
@@ -148,15 +166,120 @@ header img{
 #home article div em{
     float: right;
 }
-/****************************************************************************************/
-/****************************************************************************************/
-/****************************************************************************************/
-/*Section 2*/
-.onglet{
+#home .footer-home{
     position: absolute;
-    top: -20vh;
+    bottom: 0vh;
     width: 100vw;
-    height: 50vh;
-    background-color: red;
+    height: 15vh;
+    background-color: #04949e;
+
+}
+/****************************************************************************************/
+/***************************COMPETENCE TECHNOLOGIE PROCESS*******************************/
+/****************************************************************************************/
+#competence{
+    #height: 100vh;
+}
+#competence h1{
+    padding: 20px;
+}
+#competence ul li .smartphone{
+    display: none;
+}
+/*
+#competence .nav-tabs{
+    padding: 20px;
+}
+#competence .nav-item{
+    margin-bottom: -20px!important;
+}*/
+#competence #myTabContent{
+    #margin: 20px;
+}
+#responsive-design{
+    #position: absolute;
+    #width: 100vw;
+}
+/***************************Responsive Design*******************************/
+.responsive-design-list li{
+    display: inline-block;
+}
+#competence .responsive-design-list li aside{
+    max-width: 60vw;
+}
+#competence .responsive-design-list li article{
+    max-width: 40vw;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+#responsive-design article p{
+    font-size: 25px;
+}
+#responsive-design aside img{
+    max-width: 650px;
+}
+#responsive-design ul{
+    padding-top: 20px;
+}
+/***************************Technology*******************************/
+#technologies-utilises ul li{
+    display: inline-block;
+}
+
+#technologies-utilises ul li img{
+    padding-top: 50px;
+    margin: 20px;
+    max-width: 200px;
+    height: 20vh;
+    object-fit: contain;
+}
+
+/***************************Process*******************************/
+
+/***************************Footer Competence*******************************/
+#competence .footer-competence{
+    position: absolute;
+    bottom: 0vh;
+    width: 100vw;
+    height: 15vh;
+    background-color: pink;
     z-index: 2;
+}
+
+/****************************************************************************************/
+/****************************REALISATION*************************************************/
+/****************************************************************************************/
+#realistation{
+    position: relative;
+    width: 100vw;
+}
+#realistation h1{
+    padding: 20px;
+}
+#realistation ul{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.realisation-list li{
+    display: inline-block;
+}
+/*Pour avoir les images qui passent automatiquement en dessous, il faut le le max-width en px*/
+.realisation-list li img{
+    max-width: 240px;
+    display: block;
+    object-fit: contain;
+}
+/***************************Footer Realisation*******************************/
+#realistation .footer-realistation{
+    position: absolute;
+    bottom: 0vh;
+    width: 100vw;
+    height: 15vh;
+    background-color: whitesmoke;
+    z-index: 2;
+}
+@media screen and (max-width: 425px){
+    main{
+        padding: 0;
+    }
 }

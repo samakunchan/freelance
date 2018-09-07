@@ -1,4 +1,4 @@
-var Encore = require('@symfony/webpack-encore');
+let Encore = require('@symfony/webpack-encore');
 
 Encore
     // directory where compiled assets will be stored
@@ -20,7 +20,11 @@ Encore
     .addEntry('js/app', './assets/js/app.js')
     //.addEntry('js/scroll', './assets/js/scroll.js')
     .addStyleEntry('css/meyer', './assets/css/meyer.css')
-    .addStyleEntry('css/app', './assets/css/app.css')
+    .addStyleEntry('css/styles', './assets/css/app.css')
+    .addStyleEntry('css/responsive/big-size', './assets/css/responsive/big-size.css')
+    .addStyleEntry('css/responsive/tablet', './assets/css/responsive/tablet.css')
+    .addStyleEntry('css/responsive/mobile', './assets/css/responsive/mobile.css')
+
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

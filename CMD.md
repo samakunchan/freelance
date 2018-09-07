@@ -176,3 +176,14 @@ Les fichiers
         // display the file contents in the browser instead of downloading it
         return $this->file('invoice_3241.pdf', 'my_invoice.pdf', ResponseHeaderBag::DISPOSITION_INLINE);
     }
+    
+PROD
+--
+    
+    - Ne pas oublier de mettre le fichier composer.phar dans le dossier
+     /usr/bin/php7.1-cli composer.phar install
+     
+     /usr/bin/php7.1-cli bin/console ...
+     
+    - Ne pas oublier de changer la version php dans 1&1 si besoin.
+        Accueil->(Dans la partie Hébergement) Réglages PHP->Sélectionner le dossier et choisir la version PHP

@@ -1,0 +1,82 @@
+@media screen and (min-width: 1440px){
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 45px;
+    }
+    p{
+        font-size: 35px!important;
+        padding: 10px;
+    }
+    .navbar-brand{
+        font-size: 30px;
+    }
+    #navbarColor02 ul li a{
+        font-size: 30px;
+    }
+    #competence ul{
+        padding-top: 50px;
+    }
+    #competence ul li a{
+        font-size: 25px;
+        padding: 10px;
+    }
+    #competence .responsive-design-list li article{
+        max-width: 45vw!important;
+    }
+    #responsive-design aside img{
+        max-width: 100%;
+    }
+
+    #realistation ul{
+        padding-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 55px;
+    }
+    p{
+        font-size: 45px!important;
+        padding: 10px;
+    }
+    #competence .responsive-design-list li article {
+        max-width: 65vw!important;
+    }
+
+    .realisation-list li img {
+        max-width: 370px!important;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    h1{
+        font-size: 70px;
+    }
+    h2{
+        font-size: 65px;
+    }
+    p{
+        font-size: 55px!important;
+        padding: 10px;
+    }
+    a, span{
+        font-size: 55px!important;
+    }
+    #competence .responsive-design-list li article {
+        max-width: 65vw!important;
+        padding-left: 100px;
+    }
+    #realistation ul {
+        padding-left: 9vw!important;
+        padding-right: 9vw!important;
+    }
+    .realisation-list li img {
+        max-width: 390px!important;
+    }
+}
