@@ -39,8 +39,10 @@ let scrollUp = (delta)=> {
       }
       if (i === 1){
         document.querySelector('.slideshow').style.top = '0vh';
-      }else {
+      }else if(i === 2){
         document.querySelector('.slideshow').style.top = '-100vh';
+      }else {
+        document.querySelector('.slideshow').style.top = '-200vh';
       }
       document.querySelector('.slideshow').style.transitionDuration = '1s';
 
@@ -79,6 +81,13 @@ let toRealisation = (event)=> {
   document.querySelector('.slideshow').style.transitionDuration = '1s';
   document.querySelector('.part2').classList.add('active-page');
 };
+let toContact = (event)=> {
+  event.preventDefault();
+  initSection();
+  document.querySelector('.slideshow').style.top = '-300vh';
+  document.querySelector('.slideshow').style.transitionDuration = '1s';
+  document.querySelector('.part3').classList.add('active-page');
+};
 window.addEventListener("scroll", function (event) {
   let scroll = this.scrollY;
   console.log(scroll)
@@ -99,3 +108,4 @@ window.addEventListener('DOMMouseScroll', pageAnimationScroll);
 document.getElementById('part0').addEventListener('click', toHome);
 document.getElementById('part1').addEventListener('click', toCompetence);
 document.getElementById('part2').addEventListener('click', toRealisation);
+document.getElementById('part3').addEventListener('click', toContact);
