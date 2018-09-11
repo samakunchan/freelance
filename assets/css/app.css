@@ -7,8 +7,30 @@ section{
     width: 100vw;
     height: 100vh;
 }
-
-
+.my-text-blue{
+    color: #04949e;
+}
+.my-bg-blue{
+    background-color: #04949e;
+}
+.my-text-green{
+    color: #3CC157;
+}
+.my-bg-green{
+    background-color: #3CC157;
+}
+.my-text-orange{
+    color: #F85F36;
+}
+.my-bg-orange{
+    background-color: #F85F36;
+}
+.my-text-yellow{
+    color: #FCBC0F;
+}
+.my-bg-yellow{
+    background-color: #FCBC0F;
+}
 .part0{
     background-color: whitesmoke;
 }
@@ -61,9 +83,6 @@ nav{
 .nav-item{
     margin-left: 20px;
     margin-right: 20px;
-}
-.nav-item a{
-    #padding: 0;
 }
 .triangle{
     position: fixed;
@@ -177,28 +196,11 @@ nav{
 /****************************************************************************************/
 /***************************COMPETENCE TECHNOLOGIE PROCESS*******************************/
 /****************************************************************************************/
-#competence{
-    #height: 100vh;
-}
 #competence h1{
     padding: 20px;
 }
 #competence ul li .smartphone{
     display: none;
-}
-/*
-#competence .nav-tabs{
-    padding: 20px;
-}
-#competence .nav-item{
-    margin-bottom: -20px!important;
-}*/
-#competence #myTabContent{
-    #margin: 20px;
-}
-#responsive-design{
-    #position: absolute;
-    #width: 100vw;
 }
 /***************************Responsive Design*******************************/
 .responsive-design-list li{
@@ -278,8 +280,21 @@ nav{
     background-color: whitesmoke;
     z-index: 2;
 }
-@media screen and (max-width: 425px){
-    main{
-        padding: 0;
-    }
+/****************************************************************************************/
+/****************************CONTACT*****************************************************/
+/****************************************************************************************/
+#contact h1 {
+    padding: 20px;
+}
+#contact ul{
+    display: flex;
+    text-align: center;
+}
+#contact ul li div{
+    max-width: 20vw;
+    max-height: 35vh;
+}
+.card-body{
+    width: 100vw;
+    height: 100vh;
 }

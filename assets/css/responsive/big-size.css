@@ -12,8 +12,11 @@
     .navbar-brand{
         font-size: 30px;
     }
-    #navbarColor02 ul li a{
+    #navbarColor02 ul li .nav-link{
         font-size: 30px;
+    }
+    .dropdown-item{
+        font-size: 25px;
     }
     #competence ul{
         padding-top: 50px;
@@ -62,11 +65,14 @@
         font-size: 65px;
     }
     p{
-        font-size: 55px!important;
+        font-size: 40px!important;
         padding: 10px;
     }
-    a, span{
-        font-size: 55px!important;
+    .navbar-brand, #navbarColor02 ul li .nav-link{
+        font-size: 40px;
+    }
+    .dropdown-item{
+        font-size: 25px;
     }
     #competence .responsive-design-list li article {
         max-width: 65vw!important;
