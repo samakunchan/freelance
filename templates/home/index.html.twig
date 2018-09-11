@@ -28,7 +28,7 @@
                             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 42px, 0px);">
                                 <a id="part3" class="dropdown-item" href="#contact">Mes disponibilités</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Me contacter</a>
+                                <a class="dropdown-item" href="{{ path('contact') }}">Me contacter</a>
                             </div>
                         </li>
                     </ul>
@@ -201,7 +201,7 @@
                             <i class="fa fa-at" style="font-size:48px;color:white"></i>
                             <h4 class="card-title">Email</h4>
                             <p class="card-text">cedric.badjah@gmail.com</p>
-                            <a href="#" class="btn btn-info">Me contacter</a>
+                            <a href="{{ path('contact') }}" class="btn btn-info">Me contacter</a>
                         </div>
                     </li>
                     <li class="card text-white my-bg-orange mb-3">
@@ -224,6 +224,12 @@
                         <div class="card-body">
                             <h4 class="card-title">Google map</h4>
                             <p class="card-text">Modal google map</p>
+                        </div>
+                    </li>
+                    <li class="card text-white bg-secondary mb-3">
+                        <div class="card-header">Devis</div>
+                        <div class="card-body">
+                            <p>GRATUIT</p>
                         </div>
                     </li>
                 </ul>

@@ -32,9 +32,9 @@ class Contact
     private $email;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="string", length=255)
      */
-    private $request = [];
+    private $whatyouneed;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -87,17 +87,6 @@ class Contact
         return $this;
     }
 
-    public function getRequest(): ?array
-    {
-        return $this->request;
-    }
-
-    public function setRequest(array $request): self
-    {
-        $this->request = $request;
-
-        return $this;
-    }
 
     public function getPhone(): ?string
     {
@@ -119,6 +108,18 @@ class Contact
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getWhatyouneed(): ?string
+    {
+        return $this->whatyouneed;
+    }
+
+    public function setWhatyouneed(string $whatyouneed): self
+    {
+        $this->whatyouneed = $whatyouneed;
 
         return $this;
     }
