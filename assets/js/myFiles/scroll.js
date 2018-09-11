@@ -88,10 +88,6 @@ let toContact = (event)=> {
   document.querySelector('.slideshow').style.transitionDuration = '1s';
   document.querySelector('.part3').classList.add('active-page');
 };
-window.addEventListener("scroll", function (event) {
-  let scroll = this.scrollY;
-  console.log(scroll)
-});
 //--------------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------------
 //----------------------------DEBUT DE L'APPLICATION------------------------------------------------
