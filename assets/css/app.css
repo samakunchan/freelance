@@ -62,13 +62,27 @@ section{
 /**********************************HEADER NAVBAR MENU************************************/
 /****************************************************************************************/
 header img{
-    width: 4vw;
-    height: 8vh;
+    width: 20vw;
+    height: 10vh;
     object-fit: contain;
 }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     background-color: #FFFF00;
     color: #ff649c!important;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+.navbar-brand:hover{
+    color: #5eb5e0;
+}
+.navbar-light .navbar-brand{
+    color: #5eb5e0;
+}
+.navbar-light .navbar-brand span{
+    color: #FCBC0F;
+    font-weight: 100;
+    font-size: 15px;
 }
 nav{
     background-color: white;
@@ -202,33 +216,50 @@ nav{
 #competence ul li .smartphone{
     display: none;
 }
+.competence .nav-tabs .nav-link{
+    color: white;
+    font-size: 20px;
+}
+#competence .nav-tabs .nav-link.active{
+   color: #5eb5e0;
+}
 /***************************Responsive Design*******************************/
-.responsive-design-list li{
-    display: inline-block;
+/*
+.responsive-design-list {
+    #display: flex;
 }
-#competence .responsive-design-list li aside{
-    max-width: 60vw;
+*/
+.responsive-design-list li aside{
+    text-align: center;
 }
-#competence .responsive-design-list li article{
-    max-width: 40vw;
-    padding-bottom: 20px;
+.responsive-design-list li article{
+    padding: 20px;
     text-align: justify;
+    background-color: rgba(4, 148, 158, 0.6);
+    box-shadow: 1px 1px 1px black;
 }
+#responsive-design, #technologies-utilises, #process, #seo{
+    height: 100vh;
+}
+.responsive-design-list article{
+    width: 50vw;
+}
+/*
 #responsive-design article p{
-    font-size: 25px;
+    #font-size: 20px;
 }
 #responsive-design aside img{
-    max-width: 650px;
-}
+    #max-width: 650px;
+}*/
 #responsive-design ul{
     padding-top: 20px;
 }
 /***************************Technology*******************************/
-#technologies-utilises ul li{
+.technology li{
     display: inline-block;
 }
 
-#technologies-utilises ul li img{
+.technology li img{
     padding-top: 50px;
     margin: 20px;
     max-width: 200px;
@@ -286,15 +317,16 @@ nav{
 #contact h1 {
     padding: 20px;
 }
-#contact ul{
-    display: flex;
-    text-align: center;
+/***************************MAP*********************************************************/
+.map{
+    position: absolute;
+    padding-left: 0;
 }
-#contact ul li div{
-    max-width: 20vw;
-    max-height: 35vh;
+.map .card-body{
+    padding: 0;
 }
-.card-body{
-    width: 100vw;
-    height: 100vh;
+#map {
+    #position: absolute;
+    width:100vw;
+    height:50vh;
 }

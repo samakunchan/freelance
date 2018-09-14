@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Samakunchan Technology{% endblock %}
+{% block stylesheets %}
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+{% endblock %}
 
 {% block body %}
     <main id="main">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <span class="navbar-brand">Samakunchan Technology</span>
-                <img class="navbar-brand logo" src="{{ asset('images/logo-fr.png') }}" alt="logo" title="Samakunchan Technology">
+                <img class="navbar-brand logo" src="{{ asset('images/new-logo-fr.png') }}" alt="logo" title="Samakunchan Technology">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -54,67 +56,38 @@
                     <h2 id="texte4" style="opacity: 0"></h2>
                 </article>
             </section>
-            <section id="competence" class="page part1">
+            <section id="competence" class="page competence part1">
                 <h1 class="text-center">Compétences</h1>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a
-                                class="other nav-link active"
-                                data-toggle="tab"
-                                href="#responsive-design">Responsive design</a>
-                        <a class="smartphone nav-link active" data-toggle="tab" href="#responsive-design">
-                            <img
-                                    src="{{ asset('images/competences/templates/responsive-design.png') }}"
-                                    alt="responsive-design"
-                                    title="Responsive Design">
-                        </a>
+                        <a class="nav-link active" data-toggle="tab" href="#responsive-design">Responsive web design</a>
                     </li>
                     <li class="nav-item">
-                        <a
-                                class="other nav-link"
-                                data-toggle="tab"
-                                href="#technologies-utilises">Technologies utilisés
-                        </a>
-                        <a class="smartphone nav-link"
-                           data-toggle="tab"
-                           href="#technologies-utilises">
-                            <img
-                                    src="{{ asset('images/competences/templates/technology.png') }}"
-                                    alt="technology"
-                                    title="Technology">
-                        </a>
+                        <a class="nav-link" data-toggle="tab" href="#technologies-utilises">Technologies utilisés</a>
                     </li>
                     <li class="nav-item">
-                        <a
-                                class="other nav-link"
-                                data-toggle="tab"
-                                href="#process">Process
-                        </a>
-                        <a
-                                class="smartphone nav-link"
-                                data-toggle="tab"
-                                href="#process">
-                            <img
-                                    src="{{ asset('images/competences/templates/process.png') }}"
-                                    alt="process"
-                                    title="Process">
-                        </a>
+                        <a class="nav-link" data-toggle="tab" href="#seo">Référencement naturel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#process">Process</a>
                     </li>
                 </ul>
-                <div id="myTabContent" class="tab-content">
+                <div id="myTabContent" class="tab-content bg-light">
                     <div class="tab-pane fade show active" id="responsive-design">
-                        <ul class="responsive-design-list">
-                            <li>
+                        <ul class="responsive-design-list row">
+                            <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
                                 <aside class="mockup">
                                     <img src="{{ asset('images/competences/templates/mockup.png') }}" alt="mockup">
                                 </aside>
                             </li>
-                            <li>
+                            <li class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-7">
                                 <article>
-                                    <h2>Responsive Design</h2>
-                                    <p>
-                                            Le Responsive Web design est une approche de conception Web qui vise à l'élaboration de sites offrant une expérience de lecture et de navigation optimales pour l'utilisateur quelle que soit sa gamme d'appareil (téléphones mobiles, tablettes, liseuses, moniteurs d'ordinateur de bureau).
+                                    <h2 class="text-light">Responsive web Design</h2>
+                                    <p>Le Responsive web Design (RWD) est un site web dont la conception vise, grâce à différents principes et techniques, à offrir une consultation confortable même pour des supports différents.
                                     </p>
+                                    <p>L'utilisateur peut ainsi consulter le même site web à travers une large gamme d'appareils (moniteurs d'ordinateur, smartphone, tablettes, télévision…) avec le même confort visuel et sans avoir recours au défilement horizontal ou au zoom avant/arrière sur les appareils tactiles notamment, manipulations qui peuvent parfois dégrader l'expérience utilisateur, tant en lecture qu'en navigation.
+                                    </p>
+                                    <p>Le Responsive Web Design ou site web adaptatif (en français) est développé avec des <code>media queries</code> et un système de <code>grille bootstrap</code>.</p>
                                     <p>
                                             Une expérience utilisateur "Responsive" réussie implique un minimum de redimensionnement (zoom), de recadrage, et de défilements multidirectionnels de pages.
                                     </p>
@@ -155,9 +128,13 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="tab-pane fade" id="seo">
+                        <p>SEO</p>
+                    </div>
                     <div class="tab-pane fade" id="process">
                         <p>Salut</p>
                     </div>
+
                 </div>
             </section>
             <section id="realistation" class="page part2">
@@ -186,54 +163,67 @@
             </section>
             <section id="contact" class="page part3">
                 <h1 class="text-center">Plus d'infos</h1>
-                <ul id="cards">
-                    <li class="card text-white my-bg-blue mb-3">
-                        <div class="card-header">Disponibilité</div>
-                        <div class="card-body">
-                            <i class="fa fa-calendar" style="font-size:48px;color:white"></i>
-                            <h4 class="card-title">Lundi-Vendredi</h4>
-                            <p class="card-text">9h-18h</p>
-                        </div>
-                    </li>
-                    <li class="card text-white my-bg-green mb-3">
-                        <div class="card-header">Me contacter</div>
-                        <div class="card-body">
-                            <i class="fa fa-at" style="font-size:48px;color:white"></i>
-                            <h4 class="card-title">Email</h4>
-                            <p class="card-text">cedric.badjah@gmail.com</p>
-                            <a href="{{ path('contact') }}" class="btn btn-info">Me contacter</a>
-                        </div>
-                    </li>
-                    <li class="card text-white my-bg-orange mb-3">
-                        <div class="card-header">Réseaux sociaux</div>
-                        <div class="card-body">
-                            <i class="fa fa-twitter-square" style="font-size:48px;color:white"></i>
-                            <i class="fa fa-linkedin-square" style="font-size:48px;color:white"></i>
-                            <i class="fa fa-github" style="font-size:48px;color:white"></i>
-                        </div>
-                    </li>
-                    <li class="card text-white my-bg-yellow mb-3">
-                        <div class="card-header">Condition générale de ventes</div>
-                        <div class="card-body">
-                            <a href="#"><i class="fa fa-bank" style="font-size:48px;color:red"></i></a>
-                            <p>Modal condition général de vente</p>
-                        </div>
-                    </li>
-                    <li class="card border-secondary mb-3" style="max-width: 20rem;">
-                        <div class="card-header">Localisation</div>
-                        <div class="card-body">
-                            <h4 class="card-title">Google map</h4>
-                            <p class="card-text">Modal google map</p>
-                        </div>
-                    </li>
-                    <li class="card text-white bg-secondary mb-3">
-                        <div class="card-header">Devis</div>
-                        <div class="card-body">
-                            <p>GRATUIT</p>
-                        </div>
-                    </li>
-                </ul>
+                    <article class="row">
+                        <section class="card text-white text-center my-bg-orange mb-3 col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                            <p class="card-header">Réseaux sociaux</p>
+                            <p class="card-body text-center">
+                                <i class="fa fa-twitter-square" style="font-size:80px;color:white"></i><br>
+                                <i class="fa fa-linkedin-square" style="font-size:80px;color:white"></i><br>
+                                <i class="fa fa-github" style="font-size:80px;color:white"></i><br>
+                            </p>
+                        </section>
+
+                        <section class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                            <article class="row">
+                                <div class="card text-white text-center my-bg-green col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <div class="card-header">Me contacter</div>
+                                    <div class="card-body">
+                                        <i class="fa fa-at" style="font-size:35px;color:white"></i>
+                                        <h4 class="card-title">Email</h4>
+                                        <p class="card-text">cedric.badjah@gmail.com</p>
+                                        <a href="{{ path('contact') }}" class="btn btn-info">Me contacter</a>
+                                    </div>
+                                </div>
+                                <div class="card text-white text-center my-bg-blue col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-33">
+                                    <div class="card-header">Disponibilité</div>
+                                    <div class="card-body">
+                                        <i class="fa fa-calendar" style="font-size:35px;color:white"></i>
+                                        <h4 class="card-title">Lundi-Vendredi</h4>
+                                        <p class="card-text">9h-18h</p>
+                                    </div>
+                                </div>
+                                <div class="card text-white text-center my-bg-yellow col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <div class="card-header">Condition générale de ventes</div>
+                                    <div class="card-body">
+                                        <i class="fas fa-handshake" style="font-size:35px;color:white"></i>
+                                    <p>Modal condition général de vente</p>
+                                    </div>
+                                </div>
+                                <div class="card text-white text-center bg-secondary col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <div class="card-header">Devis</div>
+                                    <div class="card-body">
+                                        <p>GRATUIT</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="row">
+                                <div class="card border-secondary col-lg-12 map">
+                                    <div class="card-header text-center ">Localisation: Montpellier</div>
+                                    <div class="card-body">
+                                        <div id="map"></div>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </article>
             </section>
         </section>
     </main>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <script src='https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js'></script>
+    <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+    <script src="{{ asset('build/js/app.js') }}"></script>
 {% endblock %}
