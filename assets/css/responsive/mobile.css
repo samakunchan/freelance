@@ -1,0 +1,59 @@
+@media screen and (max-width: 800px){
+    .mockup{
+        display: none;
+    }
+    #competence .nav-tabs .nav-link {
+        font-size: 11px;
+    }
+    #technologies-utilises .technology li img{
+        height: 14vh;
+    }
+
+    #realistation .realisation-list li img {
+        max-width: 140px;
+    }
+
+}
+@media screen and (max-width: 360px){
+    #competence h1 {
+        padding: 15px;
+    }
+    #competence .nav-item{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #myTabContent #responsive-design ul {
+        padding-top: 0;
+    }
+    .responsive-design-list article h2{
+        font-size: 20px;
+    }
+    .responsive-design-list article p{
+        font-size: 13px;
+    }
+    #contact .contact-web{
+        display: none;
+    }
+    #contact .contact-mobile{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #competence h1 {
+        padding: 15px;
+    }
+    #competence .nav-item{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #myTabContent #responsive-design ul {
+        padding-top: 0;
+    }
+    .responsive-design-list article h2{
+        font-size: 20px;
+    }
+    .responsive-design-list article p{
+        font-size: 13px;
+    }
+}

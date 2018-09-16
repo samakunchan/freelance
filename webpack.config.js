@@ -24,6 +24,8 @@ Encore
     .addStyleEntry('css/responsive/big-size', './assets/css/responsive/big-size.css')
     .addStyleEntry('css/responsive/medium-size', './assets/css/responsive/medium-size.css')
     .addStyleEntry('css/responsive/small-size', './assets/css/responsive/small-size.css')
+    .addStyleEntry('css/responsive/tablet', './assets/css/responsive/tablet.css')
+    .addStyleEntry('css/responsive/mobile', './assets/css/responsive/mobile.css')
 
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')

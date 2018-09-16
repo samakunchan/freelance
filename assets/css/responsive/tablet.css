@@ -1,0 +1,53 @@
+/**************************  IPAD **********************/
+@media screen and (max-width: 1024px){
+    #competence, #realistation, #myTabContent {
+        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    }
+}
+@media screen and (max-width: 1024px) and (max-height: 768px){
+    .mockup img{
+        max-width: 50vw;
+    }
+    #responsive-design .responsive-design-list article {
+        width: 48vw;
+    }
+    #realistation h1{
+        padding: 15px;
+    }
+    #realistation .realisation-list li img {
+        max-width: 300px;
+        display: block;
+        object-fit: contain;
+    }
+    .map{
+        height: 49vh;
+    }
+}
+@media screen and (max-width: 768px) and (max-width: 1024px){
+    .mockup img{
+        max-width: 100vw;
+    }
+    #responsive-design .responsive-design-list{
+        display: block;
+    }
+    #responsive-design .responsive-design-list article {
+        width: 100vw;
+    }
+    #realistation h1{
+        padding: 15px;
+    }
+    .realisation-list{
+        text-align: center;
+    }
+    #realistation .realisation-list li img {
+        max-width: 270px;
+    }
+    .map{
+        height: 60vh;
+    }
+    div .map-box {
+        width: 84vw;
+        height: 55vh;
+    }
+}
+/**************************  IPAD PRO **********************/

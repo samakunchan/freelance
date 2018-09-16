@@ -210,7 +210,7 @@ nav{
 /****************************************************************************************/
 /***************************COMPETENCE TECHNOLOGIE PROCESS*******************************/
 /****************************************************************************************/
-#competence h1{
+.competence h1{
     padding: 20px;
 }
 #competence ul li .smartphone{
@@ -224,11 +224,7 @@ nav{
    color: #5eb5e0;
 }
 /***************************Responsive Design*******************************/
-/*
-.responsive-design-list {
-    #display: flex;
-}
-*/
+
 .responsive-design-list li aside{
     text-align: center;
 }
@@ -236,7 +232,6 @@ nav{
     padding: 20px;
     text-align: justify;
     background-color: rgba(4, 148, 158, 0.6);
-    box-shadow: 1px 1px 1px black;
 }
 #responsive-design, #technologies-utilises, #process, #seo{
     height: 100vh;
@@ -244,13 +239,7 @@ nav{
 .responsive-design-list article{
     width: 50vw;
 }
-/*
-#responsive-design article p{
-    #font-size: 20px;
-}
-#responsive-design aside img{
-    #max-width: 650px;
-}*/
+
 #responsive-design ul{
     padding-top: 20px;
 }
@@ -286,7 +275,7 @@ nav{
     position: relative;
     width: 100vw;
 }
-#realistation h1{
+.part2 h1{
     padding: 20px;
 }
 #realistation ul{
@@ -321,12 +310,28 @@ nav{
 .map{
     position: absolute;
     padding-left: 0;
+    height: 100vh;
+}
+.contact-web .card-header, .contact-web .card-body{
+    text-align: center;
+}
+.bg-danger .card-body{
+    text-align: justify;
+}
+.contact-mobile{
+    display: none;
 }
 .map .card-body{
     padding: 0;
 }
-#map {
-    #position: absolute;
-    width:100vw;
-    height:50vh;
+.map-box {
+    width:84vw;
+    height:37vh;
+}
+.res{
+    display: flex;
+    justify-content: center;
+}
+.res i{
+    padding: 5px;
 }
