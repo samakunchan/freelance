@@ -1,0 +1,10 @@
+<!-- Pas besoin de extend la base -->
+{% block body %}
+    <h1 style="text-align: center; color: #5eb5e0">Demande éffectuer depuis mon site: Samakunchan Technology</h1>
+    {% if data.phone %}
+        <h2 style="text-align: center; color: #5eb5e0">Contact joignable à se numéro: <em style="color: #3CC157">{{ data.phone }}</em></h2>;
+    {% endif %}
+    <div style="text-align: center;padding-left: 6vw;padding-right: 6vw;">
+        <p style="text-align: justify;font-size: 15px;letter-spacing:1px;">{{ data.content }}</p>
+    </div>
+{% endblock %}

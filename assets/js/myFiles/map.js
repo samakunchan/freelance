@@ -1,3 +1,7 @@
+//**************************************************************************************//
+//*****************SUIVRE LA DOCUMENTATION MAPBOX**************************************//
+//************************************************************************************//
+
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtYWt1bmNoYW4iLCJhIjoiY2ptMXZscHN1MDg5MDNwbzgxemN4eXVlNSJ9.-s0FJ-cfnjqG3edmK70TGA';
 
 let geojson = {

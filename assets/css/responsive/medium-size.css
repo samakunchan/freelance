@@ -5,6 +5,9 @@
     .mockup img{
         max-width: 50vw;
     }
+    .mes-infos, .formulaire {
+        margin: 1px;
+    }
 
 }
 @media screen and (max-width: 980px){

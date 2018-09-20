@@ -28,9 +28,9 @@ class ContactType extends AbstractType
                     ],
                 'preferred_choices'=>['devis']
             ])
-            ->add('phone', TextType::class)
+            ->add('phone', TextType::class, ['required'=> false])
             ->add('content', TextareaType::class)
-            ->add('save', SubmitType::class)
+            ->add('send', SubmitType::class)
         ;
     }
 

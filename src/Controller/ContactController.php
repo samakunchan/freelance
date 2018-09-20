@@ -8,31 +8,57 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class ContactController
+ * @package App\Controller
+ */
 class ContactController extends AbstractController
 {
     /**
      * @Route("/contact", name="contact")
      * @param Request $request
+     * @param \Swift_Mailer $mailer
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index(Request $request)
+    public function index(Request $request, \Swift_Mailer $mailer)
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
-            $this->sendEmail($form->getData());
+            //A activer en mode PROD en attendant de trouver une solution pour Swiftmailer
+            //$this->sendEmail($form->getData());
+
+            //Désactiver Swiftmailer en mode PROD, parce que les emails ne sont pas envoyés (Pour l'instant)
+            $message = (new \Swift_Message(ucfirst($form->getData()->getWhatyouneed())))
+                ->setFrom('samakunchan@gmail.com')
+                ->setTo($form->getData()->getEmail())
+                ->setBody(
+                    $this->renderView(
+                    // templates/emails/registration.html.twig
+                        'contact/emails.html.twig',
+                        ['data'=> $form->getData()]
+                    ),
+                    'text/html'
+                )
+            ;
+
+            $mailer->send($message);
             $this->addFlash(
                 'notice',
                 'Votre demande a été envoyé. Vous aurez votre réponse sous 48hmax.'
             );
         }
-        return $this->render('contact/index.html.twig', [
-            'controller_name' => 'ContactController',
+        return $this->render('contact/contact.html.twig', [
             'form'=> $form->createView()
         ]);
     }
 
+    /**
+     * @param $data
+     * @return bool
+     * Ne pas effacer, c'est pour la partie PROD le temps de trouver une solution pour Swiftmailer
+     */
     private function sendEmail($data){
         $mail = 'samakunchan@gmail.com';
         $mailOwner = $data->getEmail();

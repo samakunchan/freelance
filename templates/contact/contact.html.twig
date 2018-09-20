@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Contact{% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+<section class="h-100 contact-container">
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice alert alert-dismissible alert-primary text-center">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <a href="{{ path('home') }}" class="btn btn-info m-2">Retour vers la page principale</a>
+    <section class="section-formulaire w-100 h-100 text-center">
+        <article class="mes-infos p-2 h-100 bg-dark">
+            <div class="card mb-3">
+                <h3 class="card-header text-center">Mes infos</h3>
+                <div class="card-body">
+                    <h5 class="card-title">Développeur web indépendant</h5>
+                    <h6 class="card-subtitle text-muted">Création/refonte de site internet, maintenance</h6>
+                </div>
+                <img style="display: block;" src="{{ asset('images/new-logo-fr.png') }}" alt="Card image" title="Samakunchan Technology">
+                <div class="card-body">
+                    <p class="card-text">Je suis un développeur passionné. Votre rêve c'est le mien.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Développeur : Cédric Badjah</li>
+                    <li class="list-group-item">
+                        <a href="https://twitter.com/Samakunchan" target="_blank" style="text-decoration: none">
+                            <i class="fa fa-twitter-square" style="font-size:50px;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/cedric-badjah-9646b3141/" style="text-decoration: none" target="_blank">
+                            <i class="fa fa-linkedin-square" style="font-size:50px;"></i>
+                        </a>
+                        <a href="https://github.com/samakunchan" style="text-decoration: none" target="_blank">
+                            <i class="fa fa-github" style="font-size:50px"></i>
+                        </a>
+                        <a href="https://www.codeur.com/-samakunchan" style="text-decoration: none; font-size: 25px" target="_blank">
+                            CODEUR
+                        </a>
+                    </li>
+                    <li class="list-group-item">SIRET: 842 201 127 00015</li>
+                    <li class="list-group-item">Site développer avec la technology suivante: <img src="{{ asset('images/competences/technology/symfony.png') }}" alt="symfony" title="SYMFONY"></li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Condition général de vente</a>
+                </div>
+            </div>
+        </article>
+        <article class="formulaire p-2 h-100 bg-info">
+            <div class="card mb-3 text-center">
+                <h2 class="text-center">Formulaire de contact</h2>
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+                <div class="form-group">
+                    {{ form_label(form.name, 'Votre nom') }}
+                    {{ form_widget(form.name, {'attr':{'placeholder': 'Ex: Jean Petit ...'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.company, 'Nom de l\'entreprise (facultatif)') }}
+                    {{ form_widget(form.company, {'attr':{'placeholder': 'Nom de l\'entreprise ...'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.email, 'Votre email') }}
+                    {{ form_widget(form.email, {'attr':{'placeholder': 'Votre email ...'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.whatyouneed, 'Objet du message') }}
+                    {{ form_widget(form.whatyouneed) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.phone, 'Votre n° de téléphone (facultatif)') }}
+                    {{ form_widget(form.phone, {'attr':{'placeholder': 'Tel ...'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.content, 'Ecrire votre message') }}
+                    {{ form_widget(form.content, {'attr':{'placeholder': 'Ici ...', 'cols': 10, 'rows': 8}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.send, { 'label': 'Envoyer le message', 'attr': {'class': 'btn btn-primary'} }) }}
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </article>
+    </section>
+</section>
+{% endblock %}

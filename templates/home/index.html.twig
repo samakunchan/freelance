@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Samakunchan Technology{% endblock %}
+{% block title %}{{ parent() }} - Acceuil{% endblock %}
 {% block stylesheets %}
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
 {% endblock %}
@@ -17,7 +17,7 @@
                 <div class="collapse navbar-collapse bg-light" id="navbarColor02">
                     <ul class="nav navbar-nav w-100 justify-content-end menu">
                         <li class="nav-item">
-                            <a id="part0" class="nav-link" href="#home">Home</a>
+                            <a id="part0" class="nav-link menu-actif" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a id="part1" class="nav-link" href="#competence">Compétences</a>
@@ -28,7 +28,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">En savoir plus</a>
                             <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 42px, 0px);">
-                                <a id="part3" class="dropdown-item" href="#contact">Mes disponibilités</a>
+                                <a id="part3" class="dropdown-item" href="#contact">Plus d'infos</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ path('contact') }}">Me contacter</a>
                             </div>
@@ -67,9 +67,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#seo">Référencement naturel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#process">Process</a>
                     </li>
                 </ul>
                 <div id="myTabContent" class="tab-content bg-light">
@@ -129,34 +126,39 @@
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="seo">
-                        <p>SEO</p>
-                    </div>
-                    <div class="tab-pane fade" id="process">
-                        <p>Salut</p>
-                    </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-7">
+                            <article class="seo">
+                                <h2 class="text-white">Le référencement naturel (SEO)</h2>
+                                <p>Techniques cherchant à améliorer la compréhension par les robots d'indexation de la thématique et du contenu d'une ou de l'ensemble des pages d'un site web et à en augmenter ainsi le trafic naturel. On considère que le positionnement d'un site est bon lorsqu'il est positionné en première page des résultats de recherche, dans l'une des dix premières réponses d'une recherche.</p>
+                            </article>
+                            <aside class="google">
+                                <img src="{{ asset('images/competences/seo/google.png') }}" alt="Google">
+                            </aside>
+                        </div>
 
+                    </div>
                 </div>
             </section>
             <section id="realistation" class="page part2">
                 <h1 class="text-center">Réalisations</h1>
                 <ul class="realisation-list w-100">
                     <li>
-                        <img src="{{ asset('images/realisations/wa.png') }}" alt="">
+                        <img src="{{ asset('images/realisations/wa.png') }}" alt="wa" title="Web Agency">
                     </li>
                     <li>
-                        <img src="{{ asset('images/realisations/jfr.png') }}" alt="">
+                        <img src="{{ asset('images/realisations/jfr.png') }}" alt="jfr" title="Blog de jean Forteroche">
                     </li>
                     <li>
-                        <img src="{{ asset('images/realisations/vtr.png') }}" alt="">
+                        <img src="{{ asset('images/realisations/vtr.png') }}" alt="vtr" title="Vis tes rêves - Village vacance">
                     </li>
                     <li>
-                        <img src="{{ asset('images/realisations/jdr.png') }}" alt="">
+                        <img src="{{ asset('images/realisations/jdr.png') }}" alt="jdr" title="Platform JDR">
                     </li>
                     <li>
-                        <img src="{{ asset('images/realisations/strasbourg.png') }}" alt="">
+                        <img src="{{ asset('images/realisations/strasbourg.png') }}" alt="strasbourg" title="Strasbourg">
                     </li>
                     <li>
-                        <img src="{{ asset('images/realisations/velo.png') }}" alt="">
+                        <img src="{{ asset('images/realisations/velo.png') }}" alt="velo" title="Bycicle in lyon">
                     </li>
                 </ul>
 
@@ -167,41 +169,58 @@
                         <section class="card text-white my-bg-orange mb-3 col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                             <p class="card-header">Réseaux sociaux</p>
                             <p class="card-body text-center">
-                                <i class="fa fa-twitter-square" style="font-size:80px;color:white"></i><br>
-                                <i class="fa fa-linkedin-square" style="font-size:80px;color:white"></i><br>
-                                <i class="fa fa-github" style="font-size:80px;color:white"></i><br>
+                                <a href="https://twitter.com/Samakunchan" target="_blank">
+                                    <i class="fa fa-twitter-square" style="font-size:80px;color:white"></i>
+                                </a>
+                                <br>
+                                <a href="https://www.linkedin.com/in/cedric-badjah-9646b3141/">
+                                    <i class="fa fa-linkedin-square" style="font-size:80px;color:white"></i>
+                                </a>
+                                <br>
+                                <a href="https://github.com/samakunchan">
+                                    <i class="fa fa-github" style="font-size:80px;color:white"></i>
+                                </a>
+                                <br>
+                                <a href="https://www.codeur.com/-samakunchan" class="text-white" style="text-decoration: none; font-size: 25px">
+                                    CODEUR
+                                </a><br>
                             </p>
                         </section>
                         <section class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                             <article class="row">
                                 <div class="card text-white my-bg-green col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                    <div class="card-header">Me contacter</div>
+                                    <div class="card-header text-center">Coordonnées</div>
                                     <div class="card-body">
-                                        <i class="fa fa-at" style="font-size:35px;color:white"></i>
-                                        <h4 class="card-title">Email</h4>
-                                        <p class="card-text">cedric.badjah@gmail.com</p>
-                                        <a href="{{ path('contact') }}" class="btn btn-info">Me contacter</a>
+                                        <p class="card-title"><i class="fas fa-mobile-alt" style="font-size:20px;color:white"></i> 06 . 46 . 60 . 34 . 61</p>
+                                        <p class="card-title"><i class="fas fa-envelope" style="font-size:20px;color:white"></i> cedric.badjah@gmail.com</p>
+
                                     </div>
                                 </div>
                                 <div class="card text-white my-bg-blue col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-33">
-                                    <div class="card-header">Disponibilité</div>
-                                    <div class="card-body">
-                                        <i class="fa fa-calendar" style="font-size:35px;color:white"></i>
+                                    <div class="card-header text-center">Disponibilité</div>
+                                    <div class="card-body text-center">
+                                        <i class="fa fa-calendar" style="font-size:35px;color:white; padding-bottom: 10px"></i>
                                         <h4 class="card-title">Lundi-Vendredi</h4>
                                         <p class="card-text">9h-18h</p>
+                                        <a href="{{ path('contact') }}" class="btn btn-info">Me contacter</a>
                                     </div>
                                 </div>
                                 <div class="card text-white my-bg-yellow col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                    <div class="card-header">Condition générale de ventes</div>
+                                    <div class="card-header text-center">Informations complémentaires</div>
                                     <div class="card-body">
-                                        <i class="fas fa-handshake" style="font-size:35px;color:white"></i>
-                                    <p>Modal condition général de vente</p>
+                                        <div class="text-center">
+                                            <i class="fas fa-info-circle" style="font-size:35px;color:white; padding-bottom: 10px"></i>
+                                        </div>
+                                        <p>SIRET : 842 127 201 00015</p>
+                                        <p class="mt-2">
+                                            <a href="{{ path('cgv') }}">Conditions générales de ventes</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="card text-white bg-secondary col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                    <div class="card-header">Devis</div>
+                                    <div class="card-header text-center">Devis</div>
                                     <div class="card-body">
-                                        <p>GRATUIT</p>
+                                        <p class="text-center p-5">GRATUIT</p>
                                     </div>
                                 </div>
                             </article>
@@ -217,7 +236,9 @@
                     </article>
                     <article class="contact-mobile row">
                         <div class="card text-white my-bg-green col-xs-3 col-sm-3 col-md-3">
-                            <div class="card-header text-center"><a href="{{ path('contact') }}" class="btn btn-info">Me contacter</a></div>
+                            <div class="card-header text-center">
+                                <a href="{{ path('contact') }}" class="btn btn-info">Me contacter</a>
+                            </div>
                         </div>
                         <div class="card text-white my-bg-blue col-xs-3 col-sm-3 col-md-3">
                             <div class="card-header text-center">
@@ -227,8 +248,8 @@
                         </div>
                         <div class="card text-white my-bg-yellow col-xs-3 col-sm-3 col-md-3">
                             <div class="card-header text-center">
-                                <i class="fas fa-handshake" style="font-size:35px;color:white"></i>
-                                <a href="#"  class="btn btn-info">Voir les conditions générales de ventes</a>
+                                <i class="fas fa-handshake" style="font-size:35px;color:white"></i><br>
+                                <a href="{{ path('cgv') }}" class="btn btn-info">Voir les conditions générales de ventes</a>
                             </div>
                         </div>
                         <div class="card text-white bg-secondary col-xs-3 col-sm-3 col-md-3">
@@ -240,6 +261,9 @@
                                 <i class="fa fa-twitter-square" style="font-size:60px;color:white"></i><br>
                                 <i class="fa fa-linkedin-square" style="font-size:60px;color:white"></i><br>
                                 <i class="fa fa-github" style="font-size:60px;color:white"></i><br>
+                                <a href="https://www.codeur.com/-samakunchan">
+                                    CODEUR
+                                </a><br>
                             </p>
                         </div>
                     </article>
