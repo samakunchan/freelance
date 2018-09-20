@@ -2,9 +2,13 @@ let num = 0;
 
 const texte= ['Création de site web', 'Responsive design', 'Wordpress', 'Architecture de site', 'Référencement naturel'];
 const colors = ['#3CC157', '#2AA7FF', '#eb00b9', '#FCBC0F', '#F85F36'];
-
+//**************************************************************************************//
+//*****************CALLBACK DU SET INTERVAL********************************************//
+//************************************************************************************//
 let move = ()=> {
+  //Position du texte sélectionner au hasard
   let spotNumber = Math.floor(Math.random() * texte.length);
+  //Couleur choisis au hasard
   let colorNumber = Math.floor(Math.random() * (colors.length-1));
   setTimeout(()=> {
   document.getElementById('texte' + spotNumber).style.opacity = '1';
@@ -26,5 +30,9 @@ let move = ()=> {
   }
   num++;
 };
-
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+//----------------------------DEBUT DE L'APPLICATION------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 setTimeout(()=> {setInterval(move, 5000);}, 500);

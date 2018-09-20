@@ -34,4 +34,7 @@
     #realistation .realisation-list li img{
         max-width: 150px;
     }
+    .mes-infos, .formulaire {
+        width: 100vw;
+    }
 }

@@ -66,9 +66,8 @@ header img{
     height: 10vh;
     object-fit: contain;
 }
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    background-color: #FFFF00;
-    color: #ff649c!important;
+.menu-actif{
+    background-color: #04949e;
 }
 .navbar-brand{
     font-weight: bold;
@@ -256,16 +255,18 @@ nav{
     object-fit: contain;
 }
 
-/***************************Process*******************************/
-
-/***************************Footer Competence*******************************/
-#competence .footer-competence{
-    position: absolute;
-    bottom: 0vh;
+/***************************SEO*******************************/
+.seo{
+    padding: 20px;
+    text-align: justify;
+    background-color: rgba(60, 193, 87, 0.6);
+}
+.google{
     width: 100vw;
-    height: 15vh;
-    background-color: pink;
-    z-index: 2;
+    text-align: right;
+}
+.google img{
+    max-width: 50vw;
 }
 
 /****************************************************************************************/
@@ -291,18 +292,13 @@ nav{
     display: block;
     object-fit: contain;
 }
-/***************************Footer Realisation*******************************/
-#realistation .footer-realistation{
-    position: absolute;
-    bottom: 0vh;
-    width: 100vw;
-    height: 15vh;
-    background-color: whitesmoke;
-    z-index: 2;
-}
+
 /****************************************************************************************/
 /****************************CONTACT*****************************************************/
 /****************************************************************************************/
+#contact{
+    z-index: 2;
+}
 #contact h1 {
     padding: 20px;
 }
@@ -312,9 +308,7 @@ nav{
     padding-left: 0;
     height: 100vh;
 }
-.contact-web .card-header, .contact-web .card-body{
-    text-align: center;
-}
+
 .bg-danger .card-body{
     text-align: justify;
 }
@@ -334,4 +328,43 @@ nav{
 }
 .res i{
     padding: 5px;
+}
+
+/****************************************************************************************/
+/****************************PAGE FORMULAIRE CONTACT*************************************/
+/****************************************************************************************/
+
+.section-formulaire{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mes-infos, .formulaire {
+    width: 45vw;
+    margin: 5vh;
+}
+.section-formulaire img{
+    width: 100%;
+}
+.contact-container{
+    background-image: url("/images/mail-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/****************************************************************************************/
+/****************************PAGE CGV****************************************************/
+/****************************************************************************************/
+.section-cgv article{
+    text-align: justify;
+    padding: ;
+}
+.definition p, .article1 p, .article2 p, .article3 p, .article4 p, .article5 p, .article6 p, .article7 p, .article8 p, .article9 p, .article10 p, .article11 p, .article12 p, .article13 p, .article14 p, .article15 p, .article16 p{
+    padding: 5px;
+}
+.section-cgv ul{
+    margin-left: 25px;
+}
+.article2 li, .article3 li, .article4 li, .article5 li{
+    list-style: circle;
 }

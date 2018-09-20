@@ -2,7 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="description" content="Samakunchan Technology est mon site portail qui présente mes compétences et mes réalisations. Etant développeur indépendant, je réalise des site web pour des particuliers et/ou professionnels">
+    <meta name="keywords" content="HTML,CSS,PHP,JavaScript,MySQL,Freelance,Indépendant,Création de site web,Devis Gratuit,Samakunchan,Technology, Samakunchan Technology">
+    <meta name="author" content="Cédric BADJAH">
+    <meta name="author" content="Samakunchan">
+    <title>{% block title %}Samakunchan Technology{% endblock %}</title>
     <link rel="icon"
           type="image/png"
           sizes="96x96"
@@ -13,6 +17,7 @@
 
     <link rel="stylesheet" href="{{ asset('build/css/meyer.css') }}">
     <link rel="stylesheet" href="{{ asset('build/css/responsive/big-size.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/css/styles.css') }}">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
@@ -22,8 +27,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script language=javascript>
-
-      if (navigator.userAgent.match(/Android/i)
+  if (navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/webOS/i)
         || navigator.userAgent.match(/iPhone/i)
         || navigator.userAgent.match(/iPad/i)
@@ -32,15 +36,13 @@
         || navigator.userAgent.match(/Windows Phone/i)){
         document.writeln('<link href="{{ asset('build/css/responsive/tablet.css') }}" media="all" rel="stylesheet" type="text/css" />');
         document.writeln('<link href="{{ asset('build/css/responsive/mobile.css') }}" media="all" rel="stylesheet" type="text/css" />');
-        document.writeln('<link href="{{ asset('build/css/styles.css') }}" media="all" rel="stylesheet" type="text/css" />');
         document.writeln('<meta name=viewport content="width=device-width" />');
         console.log('Version mobile et tablet');
-     ﻿}else {
+     }else {
         document.writeln('<link href="{{ asset('build/css/responsive/medium-size.css') }}" media="all" rel="stylesheet" type="text/css" />');
         document.writeln('<link href="{{ asset('build/css/responsive/small-size.css') }}" media="all" rel="stylesheet" type="text/css" />');
-        document.writeln('<link href="{{ asset('build/css/styles.css') }}" media="all" rel="stylesheet" type="text/css" />');
         console.log('Version web');
-      }
+  }
     </script>
 {% endblock %}
 </body>
