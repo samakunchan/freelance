@@ -4,6 +4,7 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block body %}
 <section class="h-100 contact-container">
+    <h1 style="opacity: 0; position: absolute; top: 0;">Page Contact</h1>
     {% for message in app.flashes('notice') %}
         <div class="flash-notice alert alert-dismissible alert-primary text-center">
             {{ message }}

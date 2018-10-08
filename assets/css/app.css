@@ -38,7 +38,7 @@ section{
     background-color: #04949e;
 }
 .part2{
-    background-color: #3CC157;
+    #background-color: #3CC157;
 }
 /****************************************************************************************/
 /****************************************************************************************/
@@ -150,6 +150,9 @@ nav{
     height: 100vh;
 }
 
+.home-mobile{
+    display: none;
+}
 #home article{
     position: absolute;
 }
@@ -275,6 +278,23 @@ nav{
 #realistation{
     position: relative;
     width: 100vw;
+    background-image: url("/images/realisations/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.filter-green{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(60, 193, 87, 0.6);
+    opacity: 0.8;
+}
+.real-content{
+    opacity: 1;
+    z-index: 10;
+    position: absolute;
 }
 .part2 h1{
     padding: 20px;

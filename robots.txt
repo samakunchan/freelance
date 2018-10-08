@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://my-services.samakunchan.fr/sitemap.xml

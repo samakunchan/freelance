@@ -52,9 +52,9 @@ class CreateUserCommand extends Command
 
         $questionSurLeNom = new Question('Entrez votre nom et/ou prénom [Ex: PETIT Jean]: ');
         $questionSurLeNom->setValidator(function ($answer) {
-            if (!is_string($answer) || empty($answer)) {
+            if (!is_string($answer) && empty($answer)) {
                 throw new \RuntimeException(
-                    'Vous devez entré en nom valide.'
+                    'Vous devez entré un nom valide.'
                 );
             }
 
@@ -64,9 +64,9 @@ class CreateUserCommand extends Command
 
         $questionSurLePseudo = new Question('Entrez votre pseudo: ');
         $questionSurLePseudo->setValidator(function ($answer) {
-            if (!is_string($answer) || empty($answer)) {
+            if (!is_string($answer) && empty($answer)) {
                 throw new \RuntimeException(
-                    'Vous devez entré en nom valide.'
+                    'Vous devez entré un nom valide.'
                 );
             }
 
@@ -76,7 +76,7 @@ class CreateUserCommand extends Command
 
         $questionSurEmail = new Question('Entrez votre email: ');
         $questionSurEmail->setValidator(function ($answer) {
-            if (!is_string($answer) || empty($answer)) {
+            if (!is_string($answer) && empty($answer)) {
                 throw new \RuntimeException(
                     'Vous devez entré un email valide.'
                 );
@@ -88,9 +88,9 @@ class CreateUserCommand extends Command
 
         $questionSurLeMDP = new Question('Entrez votre mot de passe: ');
         $questionSurLeMDP->setValidator(function ($answer) {
-            if (!is_string($answer) || empty($answer)) {
+            if (!is_string($answer) && empty($answer)) {
                 throw new \RuntimeException(
-                    'Vous devez entré en mot de passe valide.'
+                    'Vous devez entré un mot de passe valide.'
                 );
             }
 
@@ -98,11 +98,25 @@ class CreateUserCommand extends Command
         });
         $questionSurLeMDP->setMaxAttempts(2);
 
+        $questionSurLeRole = new Question('Choisissez le role parmis ROLE_ADMIN, ROLE_MODO, ROLE_USER (en majuscule): ');
+        $questionSurLeRole->setValidator(function ($answer) {
+            if (!is_string($answer) && empty($answer)) {
+                if ($answer !== 'ROLE_ADMIN' || $answer !== 'ROLE_MODO' || $answer !== 'ROLE_USER'){
+                    throw new \RuntimeException('Vous devez entré un rôle valide.');
+                }
+            }
+
+            return $answer;
+        });
+        $questionSurLeRole->setMaxAttempts(2);
+
+
 
         $name = $helper->ask($input, $output, $questionSurLeNom);
         $username = $helper->ask($input, $output, $questionSurLePseudo);
         $email = $helper->ask($input, $output, $questionSurEmail);
         $password = $helper->ask($input, $output, $questionSurLeMDP);
+        $roles = $helper->ask($input, $output, $questionSurLeRole);
 
         $user = new User();
         $user->setFullname($name);
@@ -110,9 +124,9 @@ class CreateUserCommand extends Command
         $user->setEmail($email);
         $hash = $this->encoder->encodePassword($user, $password);
         $user->setPassword($hash);
-        $user->setRoles(['ROLE_ADMIN']);
-        $this->manager->persist($user);
-        $this->manager->flush();
+        $user->setRoles([$roles]);
+        //$this->manager->persist($user);
+        //$this->manager->flush();
         //$io = new SymfonyStyle($input, $output);
         //$name = $input->getArgument('name');
         //$password = $input->getArgument('password');
