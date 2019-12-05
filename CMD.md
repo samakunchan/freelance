@@ -19,13 +19,19 @@ Créer la base de donnée
 Remplacer les valeurs de la ligne ci-dessous dans le fichier `.env`
 
         DATABASE_URL=mysql://db_user:_db_password@127.0.0.1:3306/db_name
+        
         Ex: avec wamp
         db_user = root
         db_password = Ne rien mettre
-        db_name = le nom de la base de donnée
+        db_name = le nom de la base de donnée (maSuperBdd)
+        
+        Résultat: DATABASE_URL=mysql://root:@127.0.0.1:3306/maSuperBdd
+        
 Après avoir configurer le fichier `.env`
 
-    php bin/console doctrine:database:create
+    Créer la BDD:
+        php bin/console doctrine:database:create
+        Cette commande va créer automatiquement la BDD maSuperBdd. D'ou le fait que c'est un important de vérifier si tout est ok dans .env
     
     Effacer la BDD:
         php bin/console doctrine:database:drop --force
@@ -40,6 +46,7 @@ Entity
     php bin/console make:entity
     Ensuite, il faut choisir le nom de l'entité
     
+    Une fois les entity créé et configurer, les propriétés vont devenir les champs de BDD maSuperBdd, avec les lignes de commande ci-dessous.
     php bin/console make:migration
     php bin/console doctrine:migrations:migrate
     
